@@ -2,9 +2,13 @@
 
 `wakatime-mode` is an automatic time tracking extension for Emacs using [WakaTime](https://wakatime.com/).
 
+This **patched fork** of the original [wakatime-mode](https://github.com/wakatime/wakatime-mode) includes support for line numbers.
+
 ## Installation
 
-1. Install wakatime-mode for Emacs using [MELPA](https://melpa.org/#/wakatime-mode) (Doom users see [these instructions][doom install] instead).
+Note: This fork is **not available** on MELPA.
+
+1. Install wakatime-mode for Emacs using `package-vc-install`: `package-vc-install https://github.com/grimsteel/wakatime-mode wakatime-mode`
 
 2. Download [wakatime-cli](https://github.com/wakatime/wakatime-cli/releases) to `~/.wakatime/` or somewhere in your `$PATH`. (Or `brew install wakatime-cli` on Mac)
 
@@ -17,10 +21,6 @@
 6. Use Emacs with wakatime-mode turned on and your time will be tracked for you automatically.
 
 7. Visit http://wakatime.com to see your logged time.
-
-### Installation for Spacemacs
-
-See [Installing WakaTime with Spacemacs](https://develop.spacemacs.org/layers/+web-services/wakatime/README.html).
 
 ## Screen Shots
 
@@ -43,5 +43,3 @@ To be sure heartbeats are getting sent, turn on debug mode by adding this line t
     debug = true
 
 Then run `tail -f ~/.wakatime/wakatime.log` and make sure you see a 201 response code from the [WakaTime API](https://wakatime.com/api).
-
-[doom install]: https://medium.com/@el.gamerph/how-to-install-wakatime-in-doom-emacs-e5c582e15261
